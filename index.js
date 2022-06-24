@@ -57,7 +57,10 @@ app.delete("/deleteUser/:id", async (req, res) => {
 
 mongoose.connect("mongodb+srv://user:user@cluster0.tbpnr2i.mongodb.net/Crud?retryWrites=true&w=majority");
 
-app.listen("8000",()=>{
+const port = process.env.PORT || 8000;
+
+
+app.listen(port,()=>{
     console.log("server is running")
 })
 
